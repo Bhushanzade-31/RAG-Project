@@ -1,0 +1,1 @@
+texts = [doc.page_content for doc in chunks]

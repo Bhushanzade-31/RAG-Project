@@ -1,1 +1,10 @@
 .env
+Iris.csv
+venv/
+chunking.py
+config.py
+embedding.py
+
+loader.py
+main.py
+

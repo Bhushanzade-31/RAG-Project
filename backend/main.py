@@ -1,14 +1,24 @@
-from pathlib import Path
+from llm import llm
+from rag import rag_simple
+from retriever import rag_retriever
 
-from langchain_community.document_loaders.csv_loader import CSVLoader
 
-loader = CSVLoader(
-    file_path=str(Path(__file__).with_name("Iris.csv")),
-    metadata_columns=["Species"],
-    csv_args={"delimiter": ","}
-)
-data = loader.load()
+def main():
+    query = "Which movies involve time travel?"
 
-print(len(data))
-print(data[0].metadata)
-print(data[0].page_content)
+    # Inspect raw retrieval
+    results = rag_retriever.retrieve(query, top_k=3)
+    for r in results:
+        print(
+            r["rank"],
+            r["metadata"].get("title"),
+            round(r["distance"], 3),
+            round(r["similarity_score"], 3),
+        )
+
+    # Full RAG answer
+    print("\nAnswer:", rag_simple(query, rag_retriever, llm, top_k=3))
+
+
+if __name__ == "__main__":
+    main()
