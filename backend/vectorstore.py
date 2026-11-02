@@ -15,8 +15,8 @@ load_dotenv()
 
 
 class VectorStore:
-    def __init__(self, collection_name: str = "movies_collection", db_name: str = "movies_db",
-                 index_name: str = "movies_vector_index"):
+    def __init__(self, collection_name: str = "Employee_data", db_name: str = "movies_db",
+                 index_name: str = "employee_vector_index"):
         self.collection_name = collection_name
         self.db_name = db_name
         self.index_name = index_name

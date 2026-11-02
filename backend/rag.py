@@ -16,4 +16,5 @@ Question: {query}
 Answer:"""
 
     response = llm.invoke(prompt)
-    return response.content
+    answer = response.content
+    return answer

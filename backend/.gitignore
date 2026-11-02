@@ -1,11 +1,11 @@
 .env
 Iris.csv
 venv/
-chunking.py
+api.py
 config.py
 embedding.py
 
-loader.py
+
 main.py
 __pycache__/
 .env
