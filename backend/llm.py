@@ -1,16 +1,31 @@
-#connctiing to llm 
+
 import os
+from pathlib import Path
 from dotenv import load_dotenv
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
-if not groq_api_key:
-    raise ValueError("GROQ_API_KEY not found. Add it to your .env file.")
+# Load .env from the backend directory
+env_path = Path(__file__).resolve().parent / ".env"
+load_dotenv(dotenv_path=env_path, override=True)
 
-llm = ChatGroq(
-    groq_api_key=groq_api_key,
-    model_name="openai/gpt-oss-20b",   # see model note below
+# Get API key
+google_api_key = os.getenv("GOOGLE_API_KEY")
+
+if not google_api_key:
+    raise ValueError(
+        "GOOGLE_API_KEY not found. Check your backend/.env file."
+    )
+
+# Initialize Gemini
+llm = ChatGoogleGenerativeAI(
+    model="gemini-3.8-flash",
+    google_api_key=google_api_key,
     temperature=0.1,
-    max_tokens=1024,
+    max_output_tokens=1024,
 )
+
+# # Test connection
+# response = llm.invoke("Explain RAG in simple words.")
+
+# print("Gemini connected successfully!")
+# print(response.content)

@@ -2,8 +2,7 @@
 Iris.csv
 venv/
 api.py
-config.py
-embedding.py
+
 
 
 main.py
