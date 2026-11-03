@@ -1,11 +1,9 @@
 .env
 Iris.csv
 venv/
-api.py
 
 
 
-main.py
 __pycache__/
 .env
 backend/db/
