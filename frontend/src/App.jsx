@@ -7,9 +7,9 @@ const TOPICS = [
   {
     group: 'Leave & time off',
     items: [
-      'How many days of annual leave do employees get?',
-      'What is the maternity and paternity leave policy?',
-      'How do I apply for sick leave?',
+      'How many employees are female vs. male?',
+      'How many employees are in the dataset?',
+      'What is the average salary in Production?',
     ],
   },
   {

@@ -6,7 +6,7 @@ CSV_PATH = BASE_DIR / "C:\\Users\\zadeg\\OneDrive\\Desktop\\RAG\\backend\\HRData
 
 loader = CSVLoader(
     file_path=str(CSV_PATH),
-   # metadata_columns=["Employee_Name", "EmpID", "Department", "Position"],
+    metadata_columns=["Employee_Name", "EmpID", "Department", "Position"],
     csv_args={"delimiter": ","},
     encoding="utf-8-sig",
 )
