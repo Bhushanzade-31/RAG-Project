@@ -1,6 +1,7 @@
 # PeopleDesk – HR Knowledge Assistant 🤖
 
 PeopleDesk is an AI-powered HR chatbot that answers employee questions in natural language using **Retrieval-Augmented Generation (RAG)**. It retrieves relevant information from HR datasets using a vector database and generates context-aware responses.
+<img width="1411" height="824" alt="image" src="https://github.com/user-attachments/assets/e87de913-3768-4574-bdea-bf8806a50aa3" />
 
 ## 🚀 Tech Stack
 
